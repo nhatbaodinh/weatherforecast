@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<AnchorPane prefHeight="682.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dinhnhatbao.weatherforecast.DetailController">
+    <children>
+        <!-- Button Back -->
+        <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+
+        <!-- City Name -->
+        <Label fx:id="cityLabel" layoutX="15.0" layoutY="61.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="City Name" />
+
+        <!-- Weather Details -->
+        <Label fx:id="weatherDetailLabel" layoutX="15.0" layoutY="111.0" style="-fx-font-size: 18;" text="Detailed Weather Info" />
+
+        <!-- Forecast Section -->
+        <VBox fx:id="forecastVBox" layoutX="15.0" layoutY="161.0" spacing="10.0">
+            <children>
+                <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="3-Day Forecast:" />
+                <Label fx:id="day1Label" style="-fx-font-size: 18;" text="Day 1: " />
+                <Label fx:id="day2Label" style="-fx-font-size: 18;" text="Day 2: " />
+                <Label fx:id="day3Label" style="-fx-font-size: 18;" text="Day 3: " />
+            </children>
+        </VBox>
+
+        <LineChart fx:id="weatherChart" layoutX="15.0" layoutY="350.0" prefHeight="200.0" prefWidth="380.0">
+            <xAxis>
+                <CategoryAxis label="Day" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Temperature (°C)" />
+            </yAxis>
+        </LineChart>
+
+    </children>
+</AnchorPane>

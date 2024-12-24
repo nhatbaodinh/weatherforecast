@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor-pane" fx:id="anchorPane" prefHeight="682.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dinhnhatbao.weatherforecast.WFController">
+    <children>
+        <!-- Text Field -->
+        <TextField id="city-text-field" fx:id="cityTextField" layoutX="7.0" layoutY="7.0" prefHeight="35.0" prefWidth="341.0" promptText="Enter city name" />
+
+        <!-- Search Button -->
+        <Button id="search-button" fx:id="searchButton" layoutX="353.0" layoutY="7.0" mnemonicParsing="false" prefHeight="35.0" text="Search" />
+
+        <!-- Weather Info VBox -->
+        <VBox id="weather-info-box" fx:id="weatherVBox" alignment="TOP_CENTER" layoutY="51.0" prefHeight="165.0" prefWidth="416.0">
+            <children>
+                <!-- Weather Icon -->
+                <ImageView id="weather-icon" fx:id="weatherIcon" fitHeight="80.0" fitWidth="80.0">
+                    <image>
+                        <Image url="@img/weather.png" />
+                    </image>
+                </ImageView>
+
+                <!-- City Name Label -->
+                <Label id="city-name-label" fx:id="cityNameLabel" alignment="CENTER" prefHeight="0.0" prefWidth="384.0" style="-fx-font-size: 30; -fx-font-weight: bold;" text="--">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Access Date Time Label -->
+                <Label id="access-datetime-label" fx:id="accessDateTimeLabel" alignment="CENTER" prefHeight="35.0" prefWidth="384.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="--">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Weather Details VBox -->
+        <VBox id="details-box" fx:id="detailsVBox" layoutY="225.0" prefHeight="399.0" prefWidth="416.0">
+            <children>
+                <!-- Temperature HBox -->
+                <HBox id="temperature-box" fx:id="temperatureHBox" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="416.0">
+                    <children>
+                        <ImageView id="temperature-icon" fx:id="temperatureIcon" fitHeight="50.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@img/thermometer.png" />
+                            </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </ImageView>
+                        <Label id="temperature-label" fx:id="temperatureLabel" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Temperature:" />
+                    </children>
+                </HBox>
+
+                <!-- Humidity HBox -->
+                <HBox id="humidity-box" fx:id="humidityHBox" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="416.0">
+                    <children>
+                        <ImageView id="humidity-icon" fx:id="humidityIcon" fitHeight="50.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@img/humidity.png" />
+                            </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </ImageView>
+                        <Label id="humidity-label" fx:id="humidityLabel" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Humidity:" />
+                    </children>
+                </HBox>
+
+                <!-- Pressure HBox -->
+                <HBox id="pressure-box" fx:id="pressureHBox" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="416.0">
+                    <children>
+                        <ImageView id="pressure-icon" fx:id="pressureIcon" fitHeight="50.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@img/pressure.png" />
+                            </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </ImageView>
+                        <Label id="pressure-label" fx:id="pressureLabel" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Pressure:" />
+                    </children>
+                </HBox>
+
+                <!-- Wind Speed HBox -->
+                <HBox id="wind-speed-box" fx:id="windSpeedHBox" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="416.0">
+                    <children>
+                        <ImageView id="wind-speed-icon" fx:id="windSpeedIcon" fitHeight="50.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@img/cloud.png" />
+                            </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </ImageView>
+                        <Label id="wind-speed-label" fx:id="windSpeedLabel" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Wind Speed:" />
+                    </children>
+                </HBox>
+
+                <!-- Description HBox -->
+                <HBox id="description-box" fx:id="descriptionHBox" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="416.0">
+                    <children>
+                        <ImageView id="description-icon" fx:id="descriptionIcon" fitHeight="50.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@img/task.png" />
+                            </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </ImageView>
+                        <Label id="description-label" fx:id="descriptionLabel" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Description:" />
+                    </children>
+                </HBox>
+            </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+        </VBox>
+
+        <!-- Bottom Buttons HBox -->
+        <HBox id="bottom-buttons-box" fx:id="bottomButtonsHBox" alignment="CENTER" layoutY="647.0" prefHeight="29.0" prefWidth="416.0" spacing="40.0">
+            <children>
+                <Button id="history-button" fx:id="historyButton" mnemonicParsing="false" onAction="#onHistoryButtonClick" prefHeight="29.0" prefWidth="70.0" text="History" />
+                <Button id="theme-button" fx:id="themeButton" mnemonicParsing="false" onAction="#onThemeButtonClick" prefHeight="29.0" prefWidth="70.0" text="Theme" />
+                <Button id="format-button" fx:id="formatButton" mnemonicParsing="false" onAction="#onFormatButtonClick" prefHeight="29.0" prefWidth="70.0" text="Format" />
+                <Button id="detail-button" fx:id="detailButton" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="29.0" prefWidth="70.0" text="More" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

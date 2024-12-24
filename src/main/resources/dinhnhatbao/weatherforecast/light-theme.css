@@ -1,0 +1,63 @@
+/* Light theme styles */
+
+#anchor-pane {
+    -fx-background-color: #f9f9f9;
+}
+
+#city-text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#search-button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#weather-info-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+}
+
+#city-name-label {
+    -fx-text-fill: #333333;
+}
+
+#access-datetime-label {
+    -fx-text-fill: #555555;
+}
+
+#details-box HBox {
+    -fx-border-color: #eeeeee;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 5px 0;
+}
+
+#details-box Label {
+    -fx-text-fill: #444444;
+}
+
+#bottom-buttons-box Button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#bottom-buttons-box Button:hover {
+    -fx-border-color: #4caf50;
+    -fx-border-width: 2px;
+    -fx-background-color: #f1f8e9;
+}
